@@ -23,9 +23,6 @@ function App() {
       setName(user);
       setIsLoggedIn(true);
     }
-    // } else {
-    //   alert('Credenciais inválidas. Tente novamente.');
-    // }
   }catch (e){
     setIsLoggedIn(false);
     alert("Usuário ou senha incorreto");
@@ -33,16 +30,20 @@ function App() {
   };
 
   async function handleRegister(){
-    if(!name || !email || !password){
-      return alert("Preencha os campos!");  
+    try{
+      if(!name || !email || !password){
+        return alert("Preencha os campos!");  
+      }
+  
+      await api.registerUser({name, email, password});
+      const newUser = { name, password };
+      setUsers([...users, newUser]);
+      setIsLoggedIn(true);
+      alert('Registro realizado com sucesso!');
+    } catch(e){
+      setIsLoggedIn(false);
+      alert("Usuário já cadastrado!");
     }
-
-    //await axios.post("http://localhost:3001/users/", {name, email, password, avatar});
-    await api.registerUser({name, email, password});
-    const newUser = { name, password };
-    setUsers([...users, newUser]);
-    setIsLoggedIn(true);
-    alert('Registro realizado com sucesso!');
   };
 
   const handleLogout = () => {
@@ -58,7 +59,7 @@ function App() {
       ) : (
         <div className="form-container">
           {isLogin ? (
-            <div>
+            <div className="form">
               <h2>Login</h2>
               <input
                 type="text"
@@ -78,7 +79,7 @@ function App() {
               </p>
             </div>
           ) : (
-            <div>
+            <div className="form">
               <h2>Cadastro</h2>
               <input
                 type="text"
