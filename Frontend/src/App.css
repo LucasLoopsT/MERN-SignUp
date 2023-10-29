@@ -1,4 +1,8 @@
 /* App.css */
+body{
+  background-color: #f1f1c1;
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -8,6 +12,30 @@
 
 .form-container {
   text-align: center;
+  background-color: #7890a8;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.form{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard{
+  text-align: center;
+  background-color: #f0a818;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.dashboard button{
+  background-color: #181848;
+}
+
+.dashboard button:hover{
+  background-color: #454590;
 }
 
 input {
@@ -17,13 +45,31 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #ff20b5;
+  background-color: #f0a818;
   color: white;
+  font-weight: bold;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+button:hover{
+  background-color: #ba6c12;
 }
 
 span {
-  color: rgb(30, 162, 202);
+  color: #181848;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+span:hover {
+  color: #3a3aa3;
+  font-weight: bold;
+  text-decoration: underline;
   cursor: pointer;
 }
