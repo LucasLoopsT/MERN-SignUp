@@ -21,7 +21,7 @@ Integrantes do grupo responsáveis por cada tarefa:
 <img align="right" height="150em" src="preview/node.png"/>
 <br><br>
 <p align="center"  width="50em">
- Utilizamos Node.js, React e MongoDB para criar uma plataforma de registro simples e eficaz. Explorando o código você poderá ver melhor o trabalho realizado com essas tecnologias avançadas que foram incorporadas neste projeto! 
+ Utilizamos React, Node.js, Express.js, e MongoDB para criar uma plataforma de registro simples e eficaz. Explorando o código você poderá ver melhor o trabalho realizado com essas tecnologias avançadas que foram incorporadas neste projeto!
 </p>
 <img align="left" height="150em" src="preview/react.png"/>
 <img align="right" height="150em" src="preview/express.png"/>
